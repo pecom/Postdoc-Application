@@ -30,11 +30,12 @@
 
 
 \begin{document}
-\indent \indent LSST will revolutionize astronomy and cosmology with it's 10 year survey covering the southern sky every 3 nights.
+\indent \indent LSST will revolutionize astronomy and cosmology with its 10 year survey covering the southern sky every 3 nights.
 I have been working intimately with Rubin by conducting early science commissioning and studying one of the critical weak lensing systematics, blending [Mandelbaum 2018].
 Blending generically refers to anytime flux along a line of sight can be attributed to multiple objects and I have been working on an extreme case where two galaxies are so blended they are mistakenly detected as only one.
 20\% to 30\% of LSST-detected objects are expected to be an unrecognized blend making this an unavoidable, and somewhat unmitigated, problem that promises to bias basic photometry and shape measurements which will impact the capability to produce precision weak lensing results.
 Their repercussions via detection bias alone has been studied previously showing a few percent level shift in cosmology parameters [Ben/KiDS early paper] and an early study including the impact on shape and flux measurements found up to a 2$\sigma$ shift in S$_8$ when conducing a cosmic shear analysis [Erfan paper].
+Many of these studies use out of date tools that make it difficult to understand what the biases will be for current and next generation surveys.
 Quantifying the biases introduced by these objects and how to best mitigate their impact is imperative to achieve precision cosmology. 
 
 \indent \indent During my PhD, I have worked on novel methods of probabilistically labeling these objects from a catalog and am working on investigating how this labeling can improve cosmic shear measurements.
@@ -42,7 +43,9 @@ I want to continue focusing on unrecognized blends and work towards understandin
 Specifically, I am interested in studying the effect of unrecognized blends on shear calibration and photo-z calibration, as both of these rely on population statistics that are impacted by unrecognized blends, and how that can improve with probabilistic labeling from machine learning algorithms.
 \indent \indent Shear calibration, a necessary step to convert measured shapes into shears, can be done with sub-percent level accuracy using tools like Metadetect and Anacal for isolated galaxies and some blends without any simulation without inducing a new selection bias.
 However, blends that comprise galaxies in different redshift bins ($\Delta$z blends) and the missed detections can cause a bias in the shear calibration parameter (a ``shear calibration bias'') that is generally corrected via expensive simulation ($O(10^7)$ CPU-hours for DES-Y6) which introduces new systematic errors.
-[Need to read up on photo-z calibration and blending?]
+Redshift calibration, correcting biases present in $n(z)$ estimates due to selection effects, sample mismatch, and sample variance, is an equally important calibration to achieve high quality weak lensing results.
+The basic measurements of photometry, shapes, and positions can be used to constrain an $n(z)$ through the use of SOMpz,  shear ratios, and clustering redshift respectively [cite DES calibration].
+There is some work on joint shear-redshift calibration [cite MacCrann] which is able to quantify the bias however there is no work on mitigation.
 It is vital to the success of LSST to have a good understanding of how unrecognized blends impact these key calibrations and equally important to search for new mitigation strategies to make the most of the immense data coming and not inflate systematic error bars.
 The mitigation strategy I am most excited about is my work on catalog level labeling of these objects.
 
@@ -96,12 +99,11 @@ The ability to directly measure more accurate point and ensemble estimates would
 
 
 \indent \indent \textbf{Clusters} I am also interested in studying clusters.
-As part of the Rubin commissioning, I have been working on producing \textit{the first Rubin weak lensing results} by studying the Abell 360 cluster.
+As part of the Rubin commissioning, I have been working on producing \underline{the first Rubin weak lensing results} by studying the Abell 360 cluster.
 This early science played a pivotal role in stress testing many of the science pipelines along with verification and validation of the telescope's ability to perform weak lensing measurements.
 I primarily focused on source selection to isolate a lensing sample [cite technote?], estimating the $N(z)$ for that lensing sample, and also the use of Anacal as a shear calibrator.
 I also created a cross-matched catalog with DESI spectra creating an independent validation set for the photo-zs [cite pz dp1 paper].
-Through this, I’ve learned a tremendous amount about the Rubin science ecosystem and clusters in general which I would like to continue to explore.
-\indent \indent \textbf{Clusters + Unrec. Blend} A natural extension to my cluster work and blending work would be to investigate how the removal of unrecognized blends can improve cluster shear profiles, subsequent mass estimates, and cosmology.
+Through this, I’ve learned a tremendous amount about the Rubin science ecosystem and clusters in general which I would like to continue to explore. \textbf{Clusters + Unrec. Blend} A natural extension to my cluster work and blending work would be to investigate how the removal of unrecognized blends can improve cluster shear profiles, subsequent mass estimates, and cosmology.
 [Manon] has started this study by designing a blending metric for cluster cosmology that was validated in simulation and I have worked to implement this on observational data.
 In the future we will see if we are able to improve shear profiles around clusters and their mass estimates by removing the most blended objects.
 
