@@ -51,28 +51,31 @@
 
 \begin{document}
 \indent \indent LSST will revolutionize astronomy and cosmology with its 10 year survey covering the southern sky every 3 nights.
-I have been working intimately with Rubin by conducting early science commissioning and studying one of the critical weak lensing systematics, blending \cite{mandelbaum_2018}.
-Blending generically refers to any imaging when flux along a line of sight can be attributed to multiple objects.
-I have been working on the extreme case where two galaxies are so blended that they are mistakenly detected as a single galaxy.
-20\% to 30\% of LSST-detected objects are expected to be unrecognized blends making this an unavoidable and somewhat unmitigated problem that promises to bias basic photometry and shape measurements which will impact the capability to produce precision weak lensing results.
-The repercussions of unrecognized blends via detection bias alone has been studied previously \cite{ben_clustering, blends_2011, kidsblends_2025} showing a few percent level shift in cosmology parameters and an early study \cite{erfan} including the impact on shape and flux measurements found up to a 2$\sigma$ shift in S$_8$ when conducing a cosmic shear analysis.
-Many of these studies use out-of-date tools that make it difficult to understand what the biases will be for modern surveys.
+I have been working intimately with Rubin by studying one of the critical weak lensing systematics, blending \cite{mandelbaum_2018}, and conducting early science commissioning.
+Blending generically refers to any instance when flux along a line of sight can be attributed to multiple objects.
+I have been working on the extreme case where two galaxies are so blended that they are mistakenly detected as a single galaxy with an example shown in Fig~\ref{fig:plot}.
+It is expected that 20\% to 30\% of LSST-detected objects will be unrecognized blends making this an unavoidable and somewhat unmitigated problem that promises to bias basic photometry and shape measurements which will impact the capability to produce precision weak lensing results.
+% 20\% to 30\% of LSST-detected objects are expected to be unrecognized blends making this an unavoidable and somewhat unmitigated problem that promises to bias basic photometry and shape measurements which will impact the capability to produce precision weak lensing results.
+The repercussions of unrecognized blends via detection bias alone have been studied previously showing shifts in cosmology parameters at the level of a few percent \cite{ben_clustering, blends_2011, kidsblends_2025}  and an early study including the impact on shape and flux measurements found up to a 2$\sigma$ shift in S$_8$ when conducing a cosmic shear analysis \cite{erfan}.
+However, many of these studies use out-of-date tools that make it difficult to understand what the biases will be for modern surveys like LSST.
 Quantifying the biases introduced by unrecognized blends and how to best mitigate their impact is imperative to achieve precision cosmology. 
 
 \indent \indent During my PhD, I have worked on novel methods of probabilistically labeling unrecognized blends from a catalog and am currently investigating how this labeling can improve cosmic shear measurements.
-I plan to continue my focus in this area to work towards an understanding of the effects of unrecognized blends on 3x2 cosmology while using the most modern tools available for analysis including Anacal\cite{anacal} and SOMpz\cite{sompz}. 
-Specifically, I am interested in studying the effect of unrecognized blends on shear calibration and photo-z calibration, as both of these rely on population statistics that are impacted by unrecognized blends, and how those calibrations can improve with probabilistic labeling from machine learning algorithms.
+I plan work towards an understanding of the effects of unrecognized blends on 3x2 cosmology while using the most modern tools available for analysis including Anacal\cite{anacal} and SOMpz\cite{sompz}. 
+% I plan to continue my focus in this area to work towards an understanding of the effects of unrecognized blends on 3x2 cosmology while using the most modern tools available for analysis including Anacal\cite{anacal} and SOMpz\cite{sompz}. 
+Specifically, I am interested in studying the effect of unrecognized blends on shear calibration and photo-z calibration, as both of these rely on population statistics that are impacted by unrecognized blends, and how those calibrations can improve with probabilistic labeling from machine learning.
 %\indent \indent Shear calibration, a necessary step to convert measured shapes into shears, can be done with sub-percent level accuracy using tools like Metadetect and Anacal for isolated galaxies and certain blends without any simulation without inducing a new selection bias.
 
 \indent \indent Shear calibration, a necessary step to convert measured shapes into shears, can be done with sub-percent level accuracy using tools like Anacal for isolated galaxies and certain blends without any simulation\cite{anacal}.
-However, blends that comprise galaxies in different redshift bins ($\Delta$z blends) and missed detections can bias the shear calibration parameters (a ``shear calibration bias'') 
+However, blends that comprise galaxies in different redshift bins ($\Delta$z blends) and missed detections can bias the shear calibration parameters (a ``shear calibration bias'').
 Redshift calibration, which corrects biases present in $n(z)$ estimates due to selection effects, sample mismatch, and sample variance, is an equally important calibration to achieve high quality weak lensing results.
-The basic measurements of photometry, shapes, and positions (which are impacted by unrecognized blends) are used to constrain an $n(z)$ through the use of SOMpz, shear ratios, and clustering redshift respectively\cite{sompz}.
-The pivotal framework to study shear-redshift calibration was designed in \cite{maccrann} but relies on expensive simulation ($O(10^7)$ CPU-hours for DES-Y6 \cite{sid_desy6}) which subsequently introduces new systematic errors.
-It is vital to the success of LSST to have a good understanding of how unrecognized blends impact these key calibrations and equally important to search for new mitigation strategies to make the most of the immense data coming and reduce systematic errors.
-The mitigation strategy I am most excited about is my work on catalog level labeling of these objects.
+SOMpz, shear ratios, and clustering signals are used to constrain $n(z)$ estimates but are dependent on the basic measurements of photometry, shapes, and positions which are impacted by unrecognized blends \cite{sompz}.
+% The basic measurements of photometry, shapes, and positions (which are impacted by unrecognized blends) are used to constrain an $n(z)$ through the use of SOMpz, shear ratios, and clustering redshift respectively\cite{sompz}.
+The framework to study joint shear-redshift calibration was designed in \cite{maccrann} but relies on expensive simulation ($O(10^7)$ CPU-hours for DES-Y6 \cite{sid_desy6}) which subsequently introduces new systematic errors when performing cosmological analysis.
+It is vital to the success of LSST to understand how unrecognized blends impact these key calibrations and equally important to search for new mitigation strategies to make the most of the immense data coming and reduce systematic errors.
+The mitigation strategy I am most excited about is my work on catalog level labeling of these unrecognized blends.
 
-\indent \indent \textbf{Catalog-based detection of unrec. blends:} Labeling unrecognized blends requires joint space-based and ground-based data on the same patch of sky\cite{dawson}, typically deep fields, and extending beyond that overlap requires applying machine learning algorithms.
+\indent \indent \textbf{Catalog-based detection of unrec. blends:} Labeling unrecognized blends requires joint space-based and ground-based data on the same patch of sky, typically deep fields, and extending beyond that overlap requires applying machine learning algorithms.
 Using colors and size measurements of 130,000 galaxies within the COSMOS field from Subaru and HST, we've shown that algorithms like Random Forest (RF) and Self-Organizing Map (SOM) are able to efficiently classify a large fraction of unrecognized blends\cite{unrec_blends}.
 By performing this proof of concept work on observational data, we showed that it's not only possible to identify unrecognized blends at the catalog level, but also that it is a viable way forward for LSST.
 With access to spectroscopy in the COSMOS field, we were also able to study how unrecognized blends may help indirectly identify photo-z outliers.
@@ -84,9 +87,10 @@ Ideally, this could reduce shear calibration bias to acceptable levels for year 
 While we have been focusing on Anacal, this methodology should also apply to Metadetect as it is also able to correct for selection bias.
 We have created several thousand image simulations ($\sim$2,000 deg$^2$) that mimic LSST conditions with varying amounts of shear applied allowing us to perform sanity checks and basic tests of removing unrecognized blends.
 The main difficulty of the work is finding ways to define and remove unrecognized blends that does not introduce a shear dependent selection bias.
-We hope to publish our results in early 2026. \textbf{Impact on photo-z estimates from unrec. blends} Alongside quantifying the bias in shear calibration, I am interested in understanding how photometric redshift estimation and calibration are impacted by unrecognized blends.
-Including unrecognized blends in the training data for machine learning photo-z estimators (like SOMpz) can have a massive impact on the quality of point and ensemble distributions.
+We hope to publish our results in early 2026. \textbf{Photo-z + unrec. blends:} I am also interested in understanding how photometric redshift estimation and calibration are impacted by unrecognized blends.
 Previous work \cite{cunha} has shown that only a few percent of incorrect redshifts in the spectroscopic sample, which can be caused by blends, can lead to a bias as large as 50\% in the dark energy equation of state.
+For machine learning photo-z estimators, like SOMpz, it's expected that including unrecognized blends in training data can have a large impact on the quality of point and ensemble distributions.
+%Including unrecognized blends in the training data for machine learning photo-z estimators (like SOMpz) can have a massive impact on the quality of point and ensemble distributions.
 Using RAIL \cite{RAIL} and the Roman-Rubin simulations \cite{roman_rubin}, we have been able to test how different photo-z codes perform with varying levels of blend contamination in both the training and testing sample. 
 In the future, we plan to test how unrecognized blends (in training and testing sets) affect tomographic binning using SOMpz, as it is likely to be the $n(z)$ estimator for LSST cosmology.
 % Finally, we plan to validate our findings on observational data.
@@ -125,7 +129,7 @@ Within \texttt{friendly} we have worked on cross-matchers that incorporate shape
 	\includegraphics[width=0.33\linewidth]{figs/deltaz_plot}\hfill
 	\includegraphics[width=0.33\linewidth]{figs/shear_profiles.png}
 	\caption{\textbf{Left:} Example unrecognized blend in COSMOS field. Subaru detection is shown in dark blue with  HST detection in cyan and red. Note that both the photo-$z$ and shape of the Subaru galaxy are a non-linear combination of the HST galaxies. \textbf{Middle:} Fraction of blends with high redshift difference that are labelled as unrecognized blends (in blue) and vice-versa in orange as a function of pixel distance in definition of $\Delta z$ blend. Removing these objects may reduce shear calibration bias. \textbf{Right:} Tangential shear profiles around Abell 360 using three shear calibration schemes, \texttt{Anacal},  \texttt{Metadetect}, and \texttt{shapeHSM}.}
-	\label{fig:annotated_blends_lowres.png}
+	\label{fig:plot}
 \end{figure}
 
 \textbf{Clusters:} As part of the Rubin commissioning, I have been working on producing \ul{the first Rubin weak lensing results} by studying the Abell 360 cluster.
