@@ -34,6 +34,8 @@
 % \rfoot{\thepage}
 
 
+
+
 \newcommand{\yourname}{Prakruth Adari}
 
 \definecolor{linkcolor}{rgb}{0,0,1}
@@ -50,71 +52,91 @@
 
 
 \begin{document}
-\indent \indent LSST will revolutionize astronomy and cosmology with its 10 year survey covering the southern sky every 3 nights.
+
+\pagestyle{fancy}
+\fancyhead[L]{Research Statement}
+\fancyhead[R]{Prakruth Adari}
+
+\indent \indent LSST will revolutionize astronomy and cosmology with its 10 year survey covering the southern sky every three nights.
 I have been working intimately with Rubin by studying one of the critical weak lensing systematics, blending \cite{mandelbaum_2018}, and conducting early science commissioning.
 Blending generically refers to any instance when flux along a line of sight can be attributed to multiple objects.
-I have been working on the extreme case where two galaxies are so blended that they are mistakenly detected as a single galaxy with an example shown in Fig~\ref{fig:plot}.
-It is expected that 20\% to 30\% of LSST-detected objects will be unrecognized blends making this an unavoidable and somewhat unmitigated problem that promises to bias basic photometry and shape measurements which will impact the capability to produce precision weak lensing results.
+I have been working on the extreme case where two galaxies are so blended that they are mistakenly detected as a single galaxy (example shown in Fig~\ref{fig:plot}).
+Unrecognized blends can bias basic photometry and shape measurements which will impact the capability to produce precision weak lensing results.
+Moreover, it is expected that 20\% to 30\% of LSST-detected objects will be unrecognized blends making this an unavoidable and somewhat unmitigated problem \cite{roman_rubin}.
+% It is expected that 20\% to 30\% of LSST-detected objects will be unrecognized blends making this an unavoidable and somewhat unmitigated problem that promises to bias basic photometry and shape measurements which will impact the capability to produce precision weak lensing results.
 % 20\% to 30\% of LSST-detected objects are expected to be unrecognized blends making this an unavoidable and somewhat unmitigated problem that promises to bias basic photometry and shape measurements which will impact the capability to produce precision weak lensing results.
-The repercussions of unrecognized blends via detection bias alone have been studied previously showing shifts in cosmology parameters at the level of a few percent \cite{ben_clustering, blends_2011, kidsblends_2025}  and an early study including the impact on shape and flux measurements found up to a 2$\sigma$ shift in S$_8$ when conducing a cosmic shear analysis \cite{erfan}.
-However, many of these studies use out-of-date tools that make it difficult to understand what the biases will be for modern surveys like LSST.
+The repercussions of unrecognized blends via detection bias alone have been studied previously, showing shifts in cosmology parameters at the level of a few percent \cite{ben_clustering, blends_2011, kidsblends_2025}, and an early study including the impact on shape and flux measurements found up to a 2$\sigma$ shift in S$_8$ when conducing a cosmic shear analysis \cite{erfan}.
+However, tools used in many of these studied have become dated, making it difficult to understand what the biases will be for modern surveys like LSST.
 Quantifying the biases introduced by unrecognized blends and how to best mitigate their impact is imperative to achieve precision cosmology. 
 
 \indent \indent During my PhD, I have worked on novel methods of probabilistically labeling unrecognized blends from a catalog and am currently investigating how this labeling can improve cosmic shear measurements.
-I plan work towards an understanding of the effects of unrecognized blends on 3x2 cosmology while using the most modern tools available for analysis including Anacal\cite{anacal} and SOMpz\cite{sompz}. 
+I plan to work towards an understanding of the effects of unrecognized blends on 3x2 cosmology while using the most modern tools available for analysis, including Anacal\cite{anacal} and SOMpz\cite{sompz}. 
 % I plan to continue my focus in this area to work towards an understanding of the effects of unrecognized blends on 3x2 cosmology while using the most modern tools available for analysis including Anacal\cite{anacal} and SOMpz\cite{sompz}. 
-Specifically, I am interested in studying the effect of unrecognized blends on shear calibration and photo-z calibration, as both of these rely on population statistics that are impacted by unrecognized blends, and how those calibrations can improve with probabilistic labeling from machine learning.
+Specifically, I am interested in studying: (a) the effect of unrecognized blends on shear calibration and photo-z calibration, as both of these rely on population statistics that are impacted by unrecognized blends; (b) how those calibrations can improve with probabilistic labeling from machine learning (ML); and (c) how we can improve the detection of unrecognized blends.
 %\indent \indent Shear calibration, a necessary step to convert measured shapes into shears, can be done with sub-percent level accuracy using tools like Metadetect and Anacal for isolated galaxies and certain blends without any simulation without inducing a new selection bias.
 
-\indent \indent Shear calibration, a necessary step to convert measured shapes into shears, can be done with sub-percent level accuracy using tools like Anacal for isolated galaxies and certain blends without any simulation\cite{anacal}.
-However, blends that comprise galaxies in different redshift bins ($\Delta$z blends) and missed detections can bias the shear calibration parameters (a ``shear calibration bias'').
-Redshift calibration, which corrects biases present in $n(z)$ estimates due to selection effects, sample mismatch, and sample variance, is an equally important calibration to achieve high quality weak lensing results.
+\indent \indent Shear calibration---a necessary step to convert measured shapes into shears---can be done with sub-percent level accuracy using modern tools like Anacal without any external simulation\cite{anacal}.
+However, unrecognized blends can cause a bias in the shear calibration parameters if the blends comprise galaxies in different redshift bins ($\Delta$z blends). 
+% Redshift calibration, which corrects biases present in $n(z)$ estimates due to selection effects, sample mismatch, and sample variance, is an equally important calibration to achieve high quality weak lensing results.
+Redshift calibration, which corrects biases present in $n(z)$ estimates, is an equally important calibration to achieve high quality weak lensing results.
 SOMpz, shear ratios, and clustering signals are used to constrain $n(z)$ estimates but are dependent on the basic measurements of photometry, shapes, and positions which are impacted by unrecognized blends \cite{sompz}.
 % The basic measurements of photometry, shapes, and positions (which are impacted by unrecognized blends) are used to constrain an $n(z)$ through the use of SOMpz, shear ratios, and clustering redshift respectively\cite{sompz}.
-The framework to study joint shear-redshift calibration was designed in \cite{maccrann} but relies on expensive simulation ($O(10^7)$ CPU-hours for DES-Y6 \cite{sid_desy6}) which subsequently introduces new systematic errors when performing cosmological analysis.
-It is vital to the success of LSST to understand how unrecognized blends impact these key calibrations and equally important to search for new mitigation strategies to make the most of the immense data coming and reduce systematic errors.
-The mitigation strategy I am most excited about is my work on catalog level labeling of these unrecognized blends.
+The framework to study joint shear-redshift calibration was designed in \cite{maccrann}, but relies on expensive simulation ($O(10^7)$ CPU-hours for DES-Y6 \cite{sid_desy6}) which subsequently introduces new systematic errors when performing cosmological analysis.
+It is vital to the success of LSST to understand how unrecognized blends impact these key calibrations and to search for new mitigation strategies to make the most of the immense data coming.
+The mitigation strategy I am most excited about is my work on catalog level labeling of unrecognized blends.
 
-\indent \indent \textbf{Catalog-based detection of unrec. blends:} Labeling unrecognized blends requires joint space-based and ground-based data on the same patch of sky, typically deep fields, and extending beyond that overlap requires applying machine learning algorithms.
-Using colors and size measurements of 130,000 galaxies within the COSMOS field from Subaru and HST, we've shown that algorithms like Random Forest (RF) and Self-Organizing Map (SOM) are able to efficiently classify a large fraction of unrecognized blends\cite{unrec_blends}.
+\indent \indent \textbf{Catalog-based detection of unrec. blends:} 
+Labeling unrecognized blends requires joint space-based and ground-based data on the same patch of the sky. 
+Extending this beyond deep fields requires the use of machine learning algorithms.
+% Labeling unrecognized blends requires joint space-based and ground-based data on the same patch of the sky, typically in deep fields, and extending outside of that overlap requires the use of machine learning algorithms.
+Using colors and size measurements of 130,000 galaxies within the COSMOS field from Subaru and HST, we've shown that algorithms like Random Forest (RF) and Self-Organizing Map (SOM) are able to efficiently classify a large fraction of unrecognized blends \cite{unrec_blends}.
 By performing this proof of concept work on observational data, we showed that it's not only possible to identify unrecognized blends at the catalog level, but also that it is a viable way forward for LSST.
 With access to spectroscopy in the COSMOS field, we were also able to study how unrecognized blends may help indirectly identify photo-z outliers.
 I am now studying extensions to this work, both in terms of applications to weak lensing cosmology (shear and photo-z calibration) and improvements to detections and derived parameters of unrecognized blends.
 % This work focused on showing that it was possible to do this using relatively straightforward techniques and I am now studying extensions, both in terms of applications to weak lensing cosmology (shear and photo-z calibration) and improvements to detections and derived parameters of unrecognized blends.
 
 \indent \indent \textbf{Shear calibration + unrec. blends:} Using image simulation, I have been studying how the exclusion of blends informed by RF can improve shear calibration bias for Anacal.
-Ideally, this could reduce shear calibration bias to acceptable levels for year 10 LSST depth removing the need for simulation with its added sytematic error, or more realistically, reduce the systematic errors introduced when correcting for the bias. 
-While we have been focusing on Anacal, this methodology should also apply to Metadetect as it is also able to correct for selection bias.
-We have created several thousand image simulations ($\sim$2,000 deg$^2$) that mimic LSST conditions with varying amounts of shear applied allowing us to perform sanity checks and basic tests of removing unrecognized blends.
-The main difficulty of the work is finding ways to define and remove unrecognized blends that does not introduce a shear dependent selection bias.
-We hope to publish our results in early 2026. \textbf{Photo-z + unrec. blends:} I am also interested in understanding how photometric redshift estimation and calibration are impacted by unrecognized blends.
+Ideally, this could reduce shear calibration bias to acceptable levels for year 10 LSST depth which would remove the need for simulation with its added systematic error, or more realistically, reduce the systematic errors introduced when correcting for the bias. 
+Detecting unrecognized blends is an effective proxy for detecting $\Delta z$ blends (middle panel Fig.~\ref{fig:plot}) which can help us reduce the calibration bias.
+% We are investigating how indirectly removing $\Delta z$ blends through removing unrecognized blends (see middle panel of Fig.~\ref{fig:plot}) impacts the calibration bias along with testing the ability to directly detect $\Delta z$ blends in the catalog. 
+% Removing $\Delta z$ blends would be the most effective way to reduce this bias and removing unrecognized blends is an effective way to do this as shown in the middle panel of Fig.~\ref{fig:plot}.
+% While we have been focusing on Anacal, this methodology should also apply to Metadetect as it is also able to correct for selection bias.
+We have created several thousand image simulations ($\sim$2,000 deg$^2$) that mimic LSST conditions with varying amounts of shear applied allowing us test removing unrecognized blends and to perform basic sanity checks.
+The main difficulty of the work is finding ways to define and remove unrecognized blends that do not introduce a shear dependent selection bias.
+We hope to publish our results in early 2026. 
+
+\indent \indent \textbf{Photo-z + unrec. blends:} I am also interested in understanding how photometric redshift estimation and calibration are impacted by unrecognized blends.
 Previous work \cite{cunha} has shown that only a few percent of incorrect redshifts in the spectroscopic sample, which can be caused by blends, can lead to a bias as large as 50\% in the dark energy equation of state.
-For machine learning photo-z estimators, like SOMpz, it's expected that including unrecognized blends in training data can have a large impact on the quality of point and ensemble distributions.
+For machine learning photo-z estimators it's expected that including unrecognized blends in training data can have a large impact on the quality of point and ensemble estimates.
 %Including unrecognized blends in the training data for machine learning photo-z estimators (like SOMpz) can have a massive impact on the quality of point and ensemble distributions.
 Using RAIL \cite{RAIL} and the Roman-Rubin simulations \cite{roman_rubin}, we have been able to test how different photo-z codes perform with varying levels of blend contamination in both the training and testing sample. 
-In the future, we plan to test how unrecognized blends (in training and testing sets) affect tomographic binning using SOMpz, as it is likely to be the $n(z)$ estimator for LSST cosmology.
+We plan to test how unrecognized blends (in training and testing sets) affect tomographic binning using SOMpz, as it is likely to be the $n(z)$ estimator for LSST cosmology.
 % Finally, we plan to validate our findings on observational data.
 
 \indent \indent \textbf{Weak lensing + unrec. blends:} Understanding the effect of unrecognized blends on shear and redshift calibration is necessary to perform a comprehensive study of unrecognized blends in cosmic shear and in 3x2 analysis. 
-This would require processing simulations to create catalogs, removing some amount of blends, producing correlation functions and inferring a final cosmology.
-Creating realistically calibrated catalogs would rely on the results of the previous two studies to ensure the results reflect modern cosmology tools.
-I am interested in how the choice of blending cut (the minimum probability to remove a potential blend) impacts the contours, in terms of bias and size, of parameters like $\Omega_m$, $\sigma_8$, $S_8$, and $w$.
+This would require processing simulations to create catalogs, removing some amount of blends, calculating correlation functions, and inferring a final cosmology.
+Creating realistically calibrated catalogs would rely on the results of the aforementioned calibration studies to ensure that the catalogs reflect modern cosmology standards.
+I am interested in how the choice of blending cut (the minimum probability to remove a potential blend) impacts the contours in terms of bias and size of parameters like $\Omega_m$, $\sigma_8$, $S_8$, and $w$.
 This would include testing how various analysis choices like scale cuts, covariance modeling, and halo models interact with a blending cut to produce a thorough study of unrecognized blends in moden weak lensing.
-My previous experience with cosmic shear provides me with the foundation to conduct a cosmic shear study and while galaxy clustering and galaxy-galaxy lensing are out of my current expertise, I’m excited to learn about the intricacies in the rest of 3x2 cosmology.
+My previous experience with cosmic shear provides me with the foundation to conduct further cosmic shear studies and I’m excited to learn about the intricacies in the rest of 3x2 cosmology.
+% My previous experience with cosmic shear provides me with the foundation to conduct a cosmic shear study and while galaxy clustering and galaxy-galaxy lensing are out of my current expertise, I’m excited to learn about the intricacies in the rest of 3x2 cosmology.
 
 
 \indent \indent \textbf{Improved detection of unrec. blends:} Outside of weak lensing, there are strides to be made in improving detection and derived data products of unrecognized blends.
-Improvements to detection can help find possible galaxy scale strong lenses, reduce AGN contamination, and increase sample purity for galaxy studies, making it extremely worthwhile for the general community.
+Improvements to detection can help find possible galaxy-scale strong lenses, reduce AGN contamination, and increase sample purity for galaxy studies, making it extremely worthwhile for the general community.
 % Our original work focused on a proof of concept, using relatively simple tools that had previously been applied to astronomy – RF and SOM.
 % While these tools worked well enough, we have a wide variety of other catalog classifiers (multi-layer perceptron, UMAP, auto-encoders) and image-level algorithms (convolutional NN, auto-encoders, normalizing flow) to test.
-Our original work focused on relatively simple tools that had previously been applied to astronomical problems, RF and SOM, but we have a wide variety of other catalog classifiers (multi-layer perceptron, UMAP, auto-encoders) and image-level algorithms (convolutional NN, auto-encoders, normalizing flow) to test.
-One particularly exciting prospect for Rubin would be to analyze the residuals after deblending using an recurrent-CNN to find unrecognized blends as shown in \cite{sowmya}.
-Any of these implementations can then be further refined to specific science cases such as the detection of $\Delta$z blends for cosmic shear.
-\textbf{Creating and validating blending metrics:} As the failure modes for cosmic shear ($\Delta$z blends) are different from photo-z (high flux contamination) which will also be different from cluster cosmology (high blend entropy), we expect the impact of unrecognized blends to be unique for each science goal.
-To that end, I have been leading the \texttt{friendly} team in DESC in order to study unrecognized blends for various science cases and develop a general package that can enable those studies. 
-This includes refining definitions of blends, developing cross-matching metrics, and improving computational efficiency of existing matching algorithms.
-Simple matching using spatial coordinates tends to mistake recognized blends for unrecognized blends which makes quantifying biases inaccurate.
-Within \texttt{friendly} we have worked on cross-matchers that incorporate shape and flux information and created blending metrics to judge the severity of blends for various science cases.
+% Our original work focused on relatively simple tools that had previously been applied to astronomical problems, RF and SOM, but we have a wide variety of other catalog classifiers (deep neural networks, UMAP, auto-encoders) and image-level algorithms (convolutional NN, auto-encoders, normalizing flow) to test.
+We originally used straightforward ML tools, like RF and SOM, but there are a wide variety of other catalog classifiers (deep neural networks, UMAP, auto-encoders) and image-level algorithms (cNN, auto-encoders, normalizing flow) to test.
+One particularly exciting prospect for Rubin would be to analyze the residuals after deblending using a recurrent-cNN to find unrecognized blends as shown in \cite{sowmya}.
+Any of these implementations can then be refined to specific science cases such as the detection of $\Delta$z blends for cosmic shear.
+
+\indent \indent \textbf{Creating and validating blending metrics:} As the failure modes for cosmic shear ($\Delta$z blends) are different from photo-z (high flux contamination) which will be different from cluster cosmology (high blend entropy), we expect the impact of unrecognized blends to be unique for each science goal.
+To that end, I have been leading the \texttt{friendly} team in DESC in order to study unrecognized blends for various science cases and developing a general package that can enable those studies. 
+This includes refining blend definitions, developing cross-matching metrics, and improving computational efficiency of matching algorithms.
+Simple matching using spatial coordinates tend to mistake recognized blends for unrecognized blends which makes quantifying biases inaccurate.
+We have worked on cross-matchers that incorporate shape and flux information to alleviate such misclassification along with creating blending metrics to judge the severity of blends for various science cases.
+We plan to combine the blending metrics with various ML techniques to propogate them into the wide fields. 
 
 % Cross matching between ground and space based catalogs is the only way to label blends when using observational data, but this can be complicated by things like astrometry, centroid offset from different bands, and survey depth.
 %\indent \indent \textbf{Unrec. blend informed photo-z estimates} One exciting prospect once we have a well calibrated photo-z blending metric would be to incorporate that information with photo-z point and ensemble estimates.
@@ -132,28 +154,35 @@ Within \texttt{friendly} we have worked on cross-matchers that incorporate shape
 	\label{fig:plot}
 \end{figure}
 
-\textbf{Clusters:} As part of the Rubin commissioning, I have been working on producing \ul{the first Rubin weak lensing results} by studying the Abell 360 cluster.
-This early science played a pivotal role in stress testing many of the science pipelines along with verification and validation of the telescope's ability to perform weak lensing measurements.
-I primarily focused on source selection to isolate a lensing sample, estimating the $n(z)$ for that lensing sample, and estimating a tangential shear profile using Anacal.
-I also created a cross-matched catalog with DESI spectra creating an independent validation set for the photo-zs \cite{dp1_pz}.
-Through this, I’ve learned a tremendous amount about the Rubin science ecosystem and clusters in general, which I would like to continue to explore. \textbf{Clusters + unrec. blend:} A natural extension to my cluster work and blending work would be to investigate how the removal of unrecognized blends can improve cluster shear profiles, subsequent mass estimates, and cosmology.
-\cite{manon} has started this study by designing a blending metric for cluster cosmology that was validated in simulation and I have worked to implement this on observational data.
+\textbf{Galaxy Clusters:} As part of the Rubin commissioning, I have been working on producing \ul{the first Rubin weak lensing results} by studying the Abell 360 cluster.
+% This early science played a pivotal role in stress testing many of the science pipelines along with verification and validation of the telescope's ability to perform weak lensing measurements.
+This early science allows us to stress test the science pipelines along with verification and validation of the telescope's ability to perform weak lensing measurements.
+% This early science stress tests many of the science pipelines along with verification and validation of the telescope's ability to perform weak lensing measurements.
+I primarily focused on source selection to isolate a lensing sample, estimating the $n(z)$ for that lensing sample, and estimating a tangential shear profile using \texttt{Anacal} and \texttt{shapeHSM}.
+A preliminary comparison of the profiles using the estimators is shown in the right panel of Fig.~\ref{fig:plot}.
+I also created a cross-matched catalog with DESI spectra creating an independent validation set for the photo-z's \cite{dp1_pz}.
+Through these experiences, I’ve grown comfortable with the Rubin science ecosystem and would like to use that to continue exploring clusters. 
+
+\indent \indent \textbf{Clusters + unrec. blend:} A natural extension to my cluster work and blending work would be to investigate how the removal of unrecognized blends can improve cluster shear profiles, subsequent mass estimates, and cosmology.
+The authors of \cite{manon} have started this study by designing a blending metric for cluster cosmology that was validated in simulation, and I have worked to implement this metric on observational data.
 We will test if there are improvements to shear profiles around clusters and their mass estimates by removing the most blended objects.
 
-Outside of cluster cosmology, I am interested in studying clusters for their ability to constrain dark matter and test general relativity.
-Individual clusters can help constrain self-interacting dark matter along with testing GR through probing the anistotropic stress ($\eta$) and studying the ensemble of clusters helps constrain cosmological parameters like $f\sigma_8(z)$ and $\gamma$.
-While there are some previous works \cite{cluster_gr, erosita} on these parameters, there are still exciting prospects to perform these studies with Rubin along with incoming JWST/Euclid/DESI/ROMAN data.
-Given my previous experience with the Rubin ecosystem, along with the timing of Data Preview 2 and Data Relase 1 being released during the postdoc, I am in prime position to conduct those studies.
+\indent \indent \textbf{Clusters + Beyond $\Lambda$CDM:} Outside of cluster cosmology, I am interested in studying clusters for their ability to constrain dark matter and test general relativity.
+Individual clusters can help constrain self-interacting dark matter and test general relativity through probing the anisotropic stress ($\eta$), while studying the ensemble of clusters can help constrain cosmological parameters like $f\sigma_8(z)$ and $\gamma$ \cite{cluster_gr, erosita}.
+I am excited to perform these studies with incoming Rubin Data Preview 2 and Data Release 1 along with any JWST/Euclid/DESI/ROMAN data made public during this time. 
+% While there are some previous works \cite{cluster_gr, erosita} on these parameters, there are still exciting prospects to perform these studies with Rubin along with incoming JWST/Euclid/DESI/ROMAN data.
+% Given my previous experience with the Rubin ecosystem, along with the timing of Data Preview 2 and Data Release 1 being publicized during the postdoc, I am in prime position to conduct those studies.
+% I am excited to perform these studies with Rubin along with incoming JWST/Euclid/DESI/ROMAN data.
+\\
 
 % While this is quite different from my previous experiences, I have been successful in producing meaningful results in my diverse interests in the past.
 
 % I developed an improvement to radio telescope array redundant calibration [cite], ran 2D numerical simulations of charges around a boosted black hole finding fractal-like patterns in the basin boundary of the charges [cite], characterized backgrounds in a direct detection search for dark matter using SKIPPER CCDs [cite], and looked for parity violating signatures in Lyman-$\alpha$ data and showed that a naive covariance estimate could produce a large spurious signal [cite].
 
 
-
 I have been focusing on unrecognized blend as they are an unavoidable systematic for weak lensing.
-Continuing work on understanding the biases introduced by these objects in all aspects of galaxy cosmology is vital work that must be done for any ground based galaxy survey like LSST.
-While challenging, I am excited to continue working on and learning about unrecognized blends along with studying galaxy clusters to probe beyond $\Lambda$CDM cosmology. 
+Continuing to work on understanding the biases introduced by unrecognized blends in all aspects of galaxy cosmology is vital work that must be done for any ground based galaxy survey like LSST.
+While challenging, I am excited to continue working on and learning about unrecognized blends along with studying galaxy clusters to study the universe and probe beyond $\Lambda$CDM cosmology. 
 
 
 \begin{multicols}{2}
