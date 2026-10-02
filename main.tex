@@ -63,20 +63,19 @@
 \fancyhead[R]{Prakruth Adari}
 
 
-\indent \indent $\Lambda$CDM is being contested as the latest results of evolving dark energy from DESI and various tensions (namely $H_0$ and $S_8$) test our understanding of the Universe.
-Large-scale weak lensing galaxy surveys offer constraints on cosmological parameters in various redshifts along with independent systematics compared to spectroscopy and CMB studies.
-While there are a variety of probes that galaxy surveys can use, I am particularly excited by galaxy clusters as they can give us strong constraints on $\sigma_8(z)$, $\Omega_M(z)$, and $f_{\textrm{gas}}(z)$ all of which are fundamental to understand the growth of structure in the Universe.
+\indent \indent This is an extremely exciting time to be a cosmologist as Roman, Rubin, and Euclid are all starting, or already have started, to take data and will soon contribute to the growing number of intriguing results in cosmology like the evolving dark energy results from DESI or the $H_0$ and $S_8$ tensions.
+% These surveys are particularly timely as they offer constraints on cosmological parameters in various redshifts with independent systematics compared to spectroscopy and CMB.
+Understanding the redshift evolution of cosmological parameters and the growth of structure in the Universe will be key to disentangling some of these mysteries which is why I am am particularly excited to study galaxy clusters.
+Galaxy clusters can give us strong constraints on $\sigma_8(z)$, $\Omega_M(z)$, and $f_{\textrm{gas}}(z)$ all of which are fundamental to probe the growth of structure in the Universe.
 
-Galaxy clusters are some of the largest gravitationally bound structures in the Universe making them ripe for weak lensing studies.
-Furthermore, they are ideal science validation targets for early Rubin, Roman, and Euclid data as they have relatively light shear and redshift calibration requirements.
-My ultimate goal is to use these instruments to study galay clusters via weak lensing and constrain the redshift evolution of cosmological parameters.
-Over the next few years, I will perform weak lensing mass measurements of clusters in that can directly feed into a cluster cosmology study and start to measure any redshift dependence of derived parameters.
-To that end, I plan to validate the science pipelines by measuring any inherent biases and work on novel methods of mitigating weak lensing systematics.
+While my ultimate goal is to use these instruments to study galaxy clusters via weak lensing and constrain the redshift evolution of cosmological parameters, there are a number of important intermediate steps that must be performed.
+Over the next few years, I plan to validate the science pipelines used in cluster cosmology by measuring any inherent biases, work on novel methods of mitigating weak lensing systematics, and perform early science measurements on clusters using these instruments.
+My previous experiences with cluster and shear calibration equip me with the necessary tools to successfully carry out this proposal.
 
 \textbf{Previous and Current Research}
 % I have spent most of PhD working on weak lensing systematics and validating weak lensing measurements with the Vera Rubin Observatory through cluster studies.
-The weak lensing systematic I have focused on during my PhD is \textbf{unrecognized blends} which are objects (typically galaxies) that are mistakenly identified as a single entity due to severe amounts of blending (see Fig.~\ref{fig:blend_ex} for an example).
-The repercussions of unrecognized blends via detection bias alone have been studied previously, showing shifts in cosmology parameters at the level of a few percent \cite{ben_clustering, blends_2011, kidsblends_2025}, and an early study including the impact on shape and flux measurements found up to a 2$\sigma$ shift in S$_8$ when conducing a cosmic shear analysis \cite{erfan}.
+\textit{Blending} During my PhD, I focused on the weak lensing systematic of \textbf{unrecognized blends} which are objects (typically galaxies) that are mistakenly identified as a single entity due to severe amounts of overlap between sources (see Fig.~\ref{fig:blend_ex} for an example).
+The repercussions of unrecognized blends via detection bias alone have shown shifts in cosmology parameters at the level of a few percent \cite{ben_clustering, blends_2011, kidsblends_2025}, and an early study including the impact on shape and flux measurements on cosmic shear found up to a 2$\sigma$ shift in S$_8$ \cite{erfan}.
 
 \begin{wrapfigure}{r}{0.35\linewidth}
 	\vspace{-\intextsep}
@@ -88,21 +87,20 @@ The repercussions of unrecognized blends via detection bias alone have been stud
 	\vspace{-\intextsep}
 \end{wrapfigure}
 
-Typically, unrecognized blends are dealt with by measuring bias corrections from expensive image simulations that are best suited for cosmic shear studies.
-Cluster weak lensing suffers from larger shears and more blending, limiting the applicability of this calibration technique. 
-Using the calibrations from these simulations may be inaccurate for cluster lensing and assume that all relevant systematics are included in the simulations.
-Directly identifying unrecognized blends in the data is an appealing solution that I pursued.
+For 3x2pt cosmological analysis, expensive image simulation is used to measure the bias induced by unrecognized blends on redshift and shear calibration.
+% Cluster weak lensing suffers from larger shears and more blending, limiting the applicability of this calibration technique. 
+Directly identifying unrecognized blends at the catalog level is an appealing solution that I pursued during my PhD.
 
-\textit{Blending} In \cite{unrec_liang}, we showed that unrecognized blends can be readily detected at the catalog level using machine learning techniques to assign a blend probability based on measured fluxes.
-While we showed that it is possible to remove unrecognized blends from the catalog, it was unclear if such a removal would ultimately improve our cosmology. 
+In \cite{unrec_liang}, we showed that unrecognized blends can be readily detected at the catalog level using machine learning techniques that assign an unrecognized blend probability based on measured fluxes.
+While we showed that \textbf{it is possible to remove unrecognized blends from the catalog using observational data alone}, it was unclear if such a removal would ultimately improve our cosmology. 
 I investigated this by studying the impact of our blend removal method on shear calibration using the AnaCal shear framework.
 We showed that not only does the bias reduce, \textbf{the bias can be almost totally removed} with a 30-40\% sample cut \cite{unrec_shear}.
-Given that LSST will be systematics limited, a 30\% cut to remove a source bias may be worthwhile 
+Given that LSST will be systematics limited, a 30\% cut to remove a source of bias may be worthwhile.
 %A natural continuation of this work on blending is studying how redshift estimation and calibration is impacted by unrecognized blends and the possible removal. 
 % Within DESC, I have been leading the \textit{friendly} blending group which focuses on developing blending metrics and validating deblenders. 
 
-\textit{Clusters} Outside of blending I have lead efforts to produce some of the first weak lensing results with the Vera Rubin Observatory by studying the galaxy cluster Abell 360 (Fig.~\ref{fig:shear_profile}).
-For that work I specifically worked on the source sample selection, photo-$z$ validation with DESI, shear measurement with shapeHSM and AnaCal, and cluster mass estimation.
+\textit{Clusters} Outside of blending I have lead efforts to produce some of the first weak lensing results with the Vera Rubin Observatory by studying the galaxy cluster Abell 360 \cite{a360} .
+For that work I specifically worked on the \textbf{source sample selection, photo-$z$ validation with DESI, shear measurement with shapeHSM and AnaCal (Fig.~\ref{fig:shear_profile}), using SSI to evaluate cuts, and cluster mass estimation}.
 As the scope of this project grew, my responsibilities also extended beyond purely scientific as I took on the role of data manager, daily meeting coordinator, and writing coordinator.
 Along with being my first foray into clusters, this was my first time leading a large collaborative effort.
 
@@ -116,21 +114,21 @@ Along with being my first foray into clusters, this was my first time leading a 
 	\label{fig:shear_profile}
 \end{wrapfigure}
 
-Following my efforts on Abell 360, I have been working on testing the combination of AnaCal and RAIL which produce a unified shear photo-z catalog on clusters in the Euclid Deep Field South field [publication in prep.]
+Following my efforts on Abell 360, I have been working on testing the combination of AnaCal and RAIL which produce shears and redshift estimates respectively by measuring shear profiles around clusters in the Euclid Deep Field South [publication in prep.]
 % A combined shear photo-z system allows for straight forward sample selection and the ability to correct for any biases induced by a redshift cut.
-In this work we have \textbf{measured tangential shear signals around clusters that were undetectable in the base Rubin catalog}, highlighting the power of the combination of AnaCal and RAIL.
-This is one of the first examples of using these tools on observed data and gives a baseline for subsequent data releases by Rubin.
+In this work we have \textbf{measured tangential shear signals around clusters that were undetectable in the base Rubin catalog} due to cleaner sample selection and higher quality shear estimates, highlighting the power of the combination of AnaCal and RAIL
+The combination of AnaCal and RAIL is currently being used for HSC Year 6 cosmic shear and this is one of the first cluster analysis with these tools.
+% This is one of the first examples of using these tools on observed data and gives a baseline for subsequent data releases by Rubin.
+% My previous experiences with both clusters and weak lensing systematics have equipped me to lead efforts on measuring the tangential shear signal around clusters using modern cosmology measurement tools like AnaCal, RAIL, and Metadetect. 
 
-My previous experiences with both clusters and weak lensing systematics have equipped me to lead efforts on measuring the tangential shear signal around clusters using modern cosmology measurement tools like AnaCal, RAIL, and Metadetect. 
-
-\textbf{Research Proposal} During my postdoc, I plan to focus on the early data from Roman, Rubin, and Euclid primarily looking into cluster weak lensing.
+\textbf{Research Proposal} During my postdoc, I plan to focus on the early data from Roman and Rubin primarily looking into cluster weak lensing.
 I will validate and measure cluster weak lensing profiles along with working on reducing weak lensing systematics.
 
-\textit{Goal 1: Cluster measurement validation for Roman and Rubin}
+\textit{Goal 1: Cluster measurements for Roman and Rubin}
 
 %Clusters are an ideal testing ground for shear and photometric redshifts as they tend to have clear signals that can be measured even with only one cluster for both shear and photo-zs.
-While the shear and redshift calibration requirements are not as stringent as cosmic shear, precise ensemble measurements require an estimate of biases from both statistics and systematics.
-For clusters this typically is done with N-body or hydrodynamic simulations that can capture any physics-induced bias (miscentering of optical clusters due to triaxiality), but is expensive and can ignore biases coming from image processing.
+Precise ensemble measurements of galaxy clusters require an estimate of both statistical and systematic bias.
+For clusters, this is traditionally done with N-body or hydrodynamic simulations that can capture physics-induced bias (like miscentering of optical clusters due to triaxiality), but is computationally expensive and can ignore biases coming from image processing.
 I propose to work on both direct image generation and synthetic source injection (SSI) to validate shear and redshift measurements coming from science pipelines.
 
 Direct image generation has been the standard technique to calibrate any biases in cosmic shear [macrann, hsc] as it is able to directly test for systematic biases inherent in the tools and algorithms being used.
@@ -149,8 +147,6 @@ Performing both image simulation and SSI gives us an understanding of what cause
 Improving on the existing image simulation tools and developing the pipelines to measure biases via SSI are necessary steps for future data releases with more stringent systematics requirements.
 My experiences with image simulation to validate blend removal and Abell 360 cluster measurements make cluster validation a natural next step that I am qualified to work on and lead.
 
-\textit{Goal 2: Cluster measurements with Rubin in early data}
-
 With a validated pipeline in hand, we will have confident (or at least properly weighted) cluster weak lensing masses.
 For Rubin Data Preview 2 there are $\sim 100$ X-Ray detected clusters by eRosita and $\sim 400$ SZ detected clusters by ACT, which are more than enough to produce a LSST mass calibration for those external samples.
 The previous ACT calibration uses a similar number of clusters [citation], so it is possible to of produce competitive results using this early data alone.
@@ -159,16 +155,22 @@ I am excited to learn and build towards a tomographic understanding of the cosmo
 %The latest eRASS calibration [citation] uses 2,000 weak lensing measurements which limits our ability to add constraining power but the ACT calibration [citation] uses a similar number of clusters giving us the possibility of producing competitive results on this early data alone.
 
 
-\textit{Goal 3: Mitigate weak lensing systematics} 
+\textit{Goal 2: Mitigate weak lensing systematics} 
 
 I will continue to work on mitigating weak lensing systematics, especially blending.
 % I will continue to work on mitigating weak lensing systematics, especially blending but I am also interested in joint processing with Roman, Rubin, and Euclid.
-While my previous work on blending has focused on removing these extremely blended objects, it may be possible to model the effects of blending for better mitigation without incurring a statistical cost.
-Using the machine learning probability from \cite{unrec_liang} as a prior, we can treat certain objects as a superposition of two galaxies which can lead to more accurate posteriors.
+Extending my previous work on blend removal in \cite{unrec_shear} to include redshift is the next natural step towards understanding the effects of this methodology on cosmology.
+% Validating the use of catalog level machine learning to detect unrecognized blends on the intermediate steps like redshift and shear calibration are vital in order to best understand the effect of unrecognized blends on cosmology.
+Completing a redshift study would enable a re-analysis of previous data, like DES Y3 or HSC Y3, providing a comprehensive look at the effect of unrecognized blends in weak lensing.
+
+While my previous work on blending has focused on removing these undetected objects, it may be possible to model the effects of blending for better mitigation without incurring a statistical cost.
+Using the machine learning probability from \cite{unrec_liang} as a prior, we can treat certain objects as a superposition of two galaxies which can lead to more accurate posteriors for redshift and shear.
 
 For redshift distributions, the self-organizing map (SOM) which maps measured fluxes to a 2D surface, is an effective tool for estimating ensemble distributions $n(z)$ but can also be extended to account for blends as outlined in Fig~\ref{fig:som_ex}.
-Instead of asking for the single SOM cell that best maps the measured fluxes, a second ``blending SOM'' can be made which can account for the possible inputs leading to a more accurate redshift probability distribution function.
-Similarly for shears, accounting for cross-redshift blends in the measurement step may improve deblending and decrease shape noise.
+In that example, we use the blending probability $\lambda$ to combine two redshift probability distributions: the distribution assuming a single galaxy and the distribution assuming a superposition of two galaxies.
+In preliminary work, I have shown that this can produce more accurate posterior estimates than a single-galaxy SOM approach.
+For shears, accounting for cross-redshift blends can be done at the image processing level by improving deblending which can drive down shape noise.
+Both of these are relatively straight-forward to show as proof of concept, but would require much larger tests to validate.
 
 \begin{figure}
 	\centering
@@ -177,10 +179,11 @@ Similarly for shears, accounting for cross-redshift blends in the measurement st
 	\label{fig:som_ex}
 \end{figure}
 
-Ultimately, making use of space based imaging is one of the best solutions to unrecognized blends as the smaller PSF reduces the amount of overlap from neighboring sources making \textbf{joint processing an extremely powerful solution}.
-While there are strong solutions to best combine photometry, there is also work to be done on combining shape measurements to maximize weak lensing signal.
+
+The best solution to unrecognized blends would be to directly detect them which can be done through joint processing of space and ground based data.
+While there are strong solutions on how to best combine photometry, there is work to be done on combining shape measurements in order to maximize weak lensing signal.
 During my postdoc, I plan to contribute to the on-going efforts to enable joint-processing for both Metadetect and AnaCal.
-This will mostly rely on simulated datasets, like the existing Roman-Rubin simulations, but can be tested on data using deep field overlap of clusters fields.
+This will mostly rely on simulated datasets, like the existing Roman-Rubin simulations, but can be tested on data using deep field overlap of clusters fields which I am well equipped to study.
 
 
 
