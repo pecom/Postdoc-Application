@@ -168,17 +168,16 @@ Using the machine learning probability from \cite{unrec_liang} as a prior, we ca
 
 For redshift distributions, the self-organizing map (SOM) which maps measured fluxes to a 2D surface, is an effective tool for estimating ensemble distributions $n(z)$ but can also be extended to account for blends as outlined in Fig~\ref{fig:som_ex}.
 In that example, we use the blending probability $\lambda$ to combine two redshift probability distributions: the distribution assuming a single galaxy and the distribution assuming a superposition of two galaxies.
-In preliminary work, I have shown that this can produce more accurate posterior estimates than a single-galaxy SOM approach.
+In preliminary work, I have shown that this schema can produce more accurate posterior estimates than a single-galaxy SOM approach.
 For shears, accounting for cross-redshift blends can be done at the image processing level by improving deblending which can drive down shape noise.
-Both of these are relatively straight-forward to show as proof of concept, but would require much larger tests to validate.
+Both of these are relatively straight-forward to show as proof of concept and promising ideas that can improve the quality of data used in cosmological analysis.
 
 \begin{figure}
 	\centering
 	\includegraphics[width=1\linewidth]{figs/som_blend_flow.png}
-	\caption{Example of modeling blends when producing redshift estimates via a SOM. Instead of only using the cell of the best fit, a weighted SOM can be made from synthetic blends that can be used to produce a more accurate PDF.}
+	\caption{Example of modeling blends when producing redshift estimates via a SOM. Instead of only using the cell of the best fit, a weighted SOM can be made from synthetic blends that can be used to produce a more accurate PDF (color-coded to highlight contribution from individual terms).}
 	\label{fig:som_ex}
 \end{figure}
-
 
 The best solution to unrecognized blends would be to directly detect them which can be done through joint processing of space and ground based data.
 While there are strong solutions on how to best combine photometry, there is work to be done on combining shape measurements in order to maximize weak lensing signal.
